@@ -1,5 +1,7 @@
 import React from 'react';
-import { Tilt } from 'react-tilt'
+import { Tilt } from 'react-tilt';
+import brain from './brain.png';
+import './Logo.css';
 
 const defaultOptions = {
 	reverse:        false,  // reverse the tilt direction
@@ -16,8 +18,10 @@ const defaultOptions = {
 const Logo = () => {
     return(
        <div className='ma4 mt0'>
-         <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
-           <div>👽</div>
+         <Tilt className='Tilt br2 shadow-2' options={defaultOptions} style={{ height: 150, width: 150 }}>
+           <div className='Tilt-inner pa3'>
+            <img style={{paddingTop: '20px'}} alt='logo' src={brain}/>
+           </div>
          </Tilt>
        </div>
     )
